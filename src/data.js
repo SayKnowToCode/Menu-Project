@@ -1,4 +1,4 @@
-const imageURL = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpromova.com%2Fenglish-vocabulary%2Ffast-food-names-and-meanings&psig=AOvVaw1kxa5L7Qowv4ocs_39Fab0&ust=1706727998570000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMj-sLbnhYQDFQAAAAAdAAAAABAD'
+const imageURL = 'https://www.deputy.com/uploads/2018/10/The-Most-Popular-Menu-Items-That-You-should-Consider-Adding-to-Your-Restaurant_Content-image1-min-1024x569.png'
 
 const items = [
     {
@@ -72,7 +72,15 @@ const items = [
       price: 16,
       img: imageURL,
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
-    },
+    }
+    // {
+    //   id: 10,
+    //   title: 'something something',
+    //   category: 'dinner',
+    //   price: 16,
+    //   img: imageURL,
+    //   desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    // }
   ];
 
 export default items;

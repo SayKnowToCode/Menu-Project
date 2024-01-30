@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Menu from './Menu';
 import Categories from './Categories';
-import items from '../data/data';
-
-
-const allCategories = ['all', ...new Set(items.map((item) => item.category))];
+import items from './data';
 
 function App() {
+
   const [menuItems, setMenuItems] = useState(items);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  useEffect(() => {
+    const allCategories = ['all', ...new Set(items.map((item) => item.category))];
+    setCategories(allCategories);
+    setSelectedCategory('all');
+  },[menuItems])
 
   const filterItems = (category) => {
     if (category === 'all') {
       setMenuItems(items);
+      setSelectedCategory('all');
       return;
     }
     const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
+    setSelectedCategory(category)
   };
 
   return (
@@ -26,7 +33,7 @@ function App() {
           <h2>our menu</h2>
           <div className="underline"></div>
         </div>
-        <Categories categories={categories} filterItems={filterItems} />
+        <Categories categories={categories} filterItems={filterItems} selectedCategory={selectedCategory} />
         <Menu items={menuItems} />
       </section>
     </main>
