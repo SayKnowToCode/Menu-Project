@@ -177,7 +177,6 @@ Menu
 .filter-btn:hover{
   background: rgb(238, 186, 113);
   color: var(--clr-white);
-  
 }
 .active {
   background: var(--clr-gold);

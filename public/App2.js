@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
 
 function App() {
 
-  const categories = ['all', ...new Set(items.map((item) => item.category))];
-
   const [menuItems, setMenuItems] = useState(items);
+  const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
+
+  useEffect(() => {
+    const allCategories = ['all', ...new Set(items.map((item) => item.category))];
+    setCategories(allCategories);
+    setMenuItems(items);
+    setSelectedCategory('all')
+  },[items])
 
   const filterItems = (category) => {
     if (category === 'all') {

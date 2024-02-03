@@ -1,4 +1,4 @@
-const imageURL = 'https://www.deputy.com/uploads/2018/10/The-Most-Popular-Menu-Items-That-You-should-Consider-Adding-to-Your-Restaurant_Content-image1-min-1024x569.png'
+const imageURL = '/img.jpeg'
 
 const items = [
     {
@@ -73,6 +73,7 @@ const items = [
       img: imageURL,
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     }
+    // ,
     // {
     //   id: 10,
     //   title: 'something something',
